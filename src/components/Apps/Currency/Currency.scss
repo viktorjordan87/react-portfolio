@@ -1,0 +1,43 @@
+@import "../../../variables.scss";
+/* SCSS HEX */
+$black: #000000ff;
+$cadet: #5d737eff;
+$yellow-crayola: #fff07cff;
+$mint-cream: #f0f7eeff;
+$eton-blue: #87bba2ff;
+
+.currency-exchange-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $cadet;
+	h1 {
+		color: $mint-cream;
+		text-align: center;
+		a {
+			color: $yellow-crayola;
+			text-decoration: none;
+		}
+	}
+
+	label {
+		color: $mint-cream;
+	}
+
+	input,
+	#currency-select {
+		color: $yellow-crayola;
+	}
+	.currency-exchange {
+		margin: 15px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		@include for-size(mobile, down) {
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+		}
+		grid-gap: 15px;
+	}
+}

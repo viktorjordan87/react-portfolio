@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+header {
+	display: flex;
+	flex-direction: row;
+	@include margin-width;
+	padding: 2rem 0;
+}

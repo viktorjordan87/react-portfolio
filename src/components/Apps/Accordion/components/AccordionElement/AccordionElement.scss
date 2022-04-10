@@ -1,0 +1,30 @@
+@import "../../Accordion.scss";
+
+.accordion-element.MuiPaper-root.Mui-expanded {
+	margin-bottom: 1rem !important;
+	margin-top: 1rem !important;
+}
+
+/* Light theme */
+.accordion-element.MuiPaper-root.light {
+	//Base
+	.MuiButtonBase-root {
+	}
+	//Collapse
+	.MuiCollapse-root {
+		background-color: $maize-crayola;
+	}
+}
+
+/* Dark theme */
+.accordion-element.MuiPaper-root.dark {
+	//Base
+	.MuiButtonBase-root {
+	}
+	//Collapse
+	.MuiCollapse-root {
+		background-color: $jet;
+		color: $gainsboro;
+		border: 1px solid rgba($maize-crayola, 0.7);
+	}
+}

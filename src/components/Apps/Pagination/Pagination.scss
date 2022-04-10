@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+.pagination-container {
+	padding: 4vmax;
+	svg {
+		fill: $color_white_0;
+	}
+	h2 {
+		color: $color_white_0;
+	}
+	ul * {
+		color: $color_white_0;
+		list-style-type: none;
+	}
+	li button {
+		background-color: transparent;
+		color: white;
+		border-color: white;
+		&.Mui-selected {
+			background-color: #481bc5;
+			color: white;
+			border-color: white;
+		}
+	}
+}

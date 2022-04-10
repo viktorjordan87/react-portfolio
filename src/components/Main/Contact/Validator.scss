@@ -1,0 +1,55 @@
+@import "../../../variables.scss";
+
+/* Validátor */
+.validator {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"robot bubble"
+		"robot form";
+	/* Picture */
+	picture {
+		grid-area: robot;
+		display: flex;
+		img {
+			width: 300px;
+			@include for-size(500px, down) {
+				margin-right: -50px;
+				margin-left: -50px;
+			}
+		}
+	}
+	/* Bubble and text */
+	.bubble-and-text {
+		grid-area: bubble;
+		position: relative;
+		height: 150px;
+		width: 150px;
+		svg {
+			height: 150px;
+			width: 150px;
+			fill: $color_gray_1;
+			transform: scaleY(50%);
+		}
+		p {
+			font-weight: bold;
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			display: grid;
+			place-items: center;
+			margin: 0;
+			z-index: 2;
+		}
+	}
+	/*Validator form*/
+	.validator-form {
+		grid-area: form;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-left: 50px;
+	}
+}

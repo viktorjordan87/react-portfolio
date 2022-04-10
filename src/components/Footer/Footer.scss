@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+footer.rjs-footer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	background-color: $color_black_0;
+	@include padding-width;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.infobox {
+		width: 70%;
+		@include for-size(mobile, down) {
+			width: 80%;
+		}
+		margin: 2vh 0;
+	}
+}

@@ -1,0 +1,85 @@
+@import "../../../variables.scss";
+
+form.contactform {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, auto);
+	column-gap: 20px;
+	grid-template-areas:
+		"name name"
+		"reply reply"
+		"message message"
+		"validator submit";
+	@include for-size(mobile, down) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, auto);
+		column-gap: 20px;
+		grid-template-areas:
+			"name"
+			"reply"
+			"message "
+			"validator "
+			"submit";
+	}
+	label {
+		opacity: 0.6;
+		color: $color_gray_1;
+		font-size: 1.2rem;
+		text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+		font-weight: bold;
+	}
+	input[type="text"] {
+		margin: 1rem 0;
+		background-color: transparent;
+		border-width: 0;
+		border-bottom: 3px solid $color_blue_1;
+		height: 2.5rem;
+		color: $color_white_0;
+		text-shadow: 0px 3px 6px rgba($color_black_0, 0.32);
+		font-size: 1.7rem;
+		font-weight: 500;
+		padding: 15px;
+		@include for-size(tablet, down) {
+			font-size: 1.4rem;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	.name {
+		grid-area: name;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1vmax;
+	}
+	.reply {
+		grid-area: reply;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1vmax;
+	}
+	.message {
+		grid-area: message;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1vmax;
+	}
+	.validator {
+		grid-area: validator;
+	}
+	.submit {
+		grid-area: submit;
+		justify-self: stretch;
+		@include for-size(mobile, down) {
+			justify-self: flex-end;
+		}
+		align-self: center;
+
+		button {
+			width: 100%;
+			@include for-size(mobile, down) {
+				width: auto;
+			}
+		}
+	}
+}

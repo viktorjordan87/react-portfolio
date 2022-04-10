@@ -1,0 +1,27 @@
+/* SCSS HEX */
+$eggshell: #f4f1deff;
+$terra-cotta: #e07a5fff;
+$independence: #3d405bff;
+$green-sheen: #81b29aff;
+$deep-champagne: #f2cc8fff;
+
+.hoc-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: $independence;
+	padding: 3vmax;
+	ul li {
+		color: $eggshell;
+	}
+	p.hold-on {
+		color: $green-sheen;
+	}
+	h3 {
+		color: $deep-champagne;
+	}
+	h2 {
+		color: $terra-cotta;
+	}
+}

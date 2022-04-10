@@ -1,0 +1,31 @@
+@import "../../../variables.scss";
+/* SCSS HEX */
+$gunmetal: #2a2d34ff;
+$carnelian: #b3001bff;
+$mint-cream: #f1f7edff;
+$turquoise-green: #91c7b1ff;
+$honey-yellow: #ffb30fff;
+
+.hoc-container-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $gunmetal;
+	padding: 3vmax;
+	h2 {
+		color: $honey-yellow;
+	}
+	.hoc-compare-container {
+		display: flex;
+		flex-direction: row;
+		@include for-size(tablet, down) {
+			flex-direction: column;
+		}
+		justify-content: space-between;
+		.base-box {
+			margin: 75px;
+		}
+	}
+}

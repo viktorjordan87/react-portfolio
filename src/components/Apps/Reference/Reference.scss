@@ -1,0 +1,52 @@
+@import "../../../variables.scss";
+/* SCSS HEX */
+$prussian-blue: #1c3144ff;
+$rosso-corsa: #d00000ff;
+$selective-yellow: #ffba08ff;
+$cadet-blue-crayola: #a2aebbff;
+$green-blue-crayola: #3f88c5ff;
+
+.reference-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: $prussian-blue;
+	padding-bottom: 10vh;
+	h1 {
+		text-align: center;
+		color: $selective-yellow;
+	}
+	h2 {
+		color: $selective-yellow;
+		text-align: center;
+	}
+	h2.timer {
+		color: $rosso-corsa;
+	}
+	button {
+		margin: 10px;
+	}
+	p {
+		text-align: center;
+		color: $cadet-blue-crayola;
+	}
+	input[type="text"] {
+		width: 300px;
+		margin: 0 auto;
+		display: flex;
+	}
+	.reference-1,
+	.reference-2,
+	.reference-3 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 40%;
+		margin: 0 auto 50px auto;
+		@include for-size(mobile, down) {
+			max-width: 90%;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+/* SCSS HEX */
+$gunmetal: #2a2d34ff;
+$carnelian: #b3001bff;
+$mint-cream: #f1f7edff;
+$turquoise-green: #91c7b1ff;
+$honey-yellow: #ffb30fff;
+
+.base-box {
+	height: 570px;
+	width: 370px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	.base-image {
+		width: 100%;
+		height: 275px;
+		object-fit: cover;
+	}
+	.base-title {
+		color: $gunmetal;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 25px;
+	}
+	.base-lorem {
+		margin-top: 0;
+		text-align: center;
+		padding: 25px;
+		display: grid;
+		place-items: center;
+	}
+	.base-button.MuiButton-root {
+		align-items: center;
+		background-color: $honey-yellow;
+		margin: 0 auto;
+	}
+}

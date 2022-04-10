@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+.autocomplete-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 600px;
+	margin: 5vw auto;
+	min-height: 100vh;
+	h1 {
+		color: $color_gray_1;
+		text-align: center;
+	}
+	.MuiAutocomplete-root {
+		background-color: $color_white_0 !important;
+		.MuiFilledInput-root.MuiInputBase-adornedEnd {
+			padding-bottom: 10px !important;
+			margin-top: 8px;
+		}
+	}
+
+	.autocomplete-results {
+		justify-self: flex-start;
+		color: $color_gray_1;
+	}
+}

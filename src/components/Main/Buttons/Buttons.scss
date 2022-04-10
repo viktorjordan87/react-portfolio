@@ -1,0 +1,15 @@
+@import "../../../variables.scss";
+
+.MuiButton-outlined.rjs-button-outlined {
+	color: $color_white_0;
+	border-color: $color_white_0;
+	text-transform: none;
+	align-self: flex-end;
+	padding-left: 35px;
+	padding-right: 35px;
+	&:hover {
+		color: $color_black_0;
+		background-color: $color_white_0;
+		border-color: $color_black_0;
+	}
+}

@@ -1,0 +1,111 @@
+@import "../../../variables.scss";
+
+/* SCSS RGB */
+$rich-black-fogra-29: rgba(4, 21, 31, 1);
+$rich-black: rgba(24, 58, 55, 1);
+$wheat: rgba(239, 214, 172, 1);
+$mahogany: rgba(196, 73, 0, 1);
+$dark-purple: rgba(67, 37, 52, 1);
+
+.photogallery {
+	padding: 2vmax;
+	background-color: $rich-black-fogra-29;
+	.copyright-pixabay {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		color: $wheat;
+		div {
+			justify-content: flex-end;
+			a {
+				color: $mahogany;
+				display: block;
+				width: 100%;
+				text-align: end;
+			}
+		}
+		svg {
+			align-self: flex-start;
+			width: 150px;
+			height: 50px;
+			fill: $wheat;
+		}
+	}
+	.gallery-header {
+		text-align: center;
+		color: $mahogany;
+	}
+	.gallery-container {
+		.photogallery-search-field {
+			background-color: white;
+			width: 500px;
+			@include for-size(mobile, down) {
+				width: 375px;
+			}
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			svg {
+				cursor: pointer;
+			}
+		}
+		ul.listings {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 400px);
+			list-style-type: none;
+			justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 0;
+			li {
+				position: relative;
+				height: 400px;
+				margin: 10px;
+				overflow: hidden;
+				.tags {
+					position: absolute;
+					padding: 5px;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 20px;
+					color: $color_white_0;
+					text-shadow: 1px 1px 5px black;
+					z-index: 2;
+				}
+				[data-rmiz-wrap="visible"] {
+					height: 100%;
+				}
+				svg.donwload-icon {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 50px;
+					z-index: 2;
+					padding: 16px 8px;
+					fill: $wheat;
+				}
+			}
+		}
+		nav.pagination {
+			margin: 0 auto;
+			ul {
+				justify-content: center;
+				&* {
+					color: $color_white_0;
+					list-style-type: none;
+				}
+				li button {
+					background-color: transparent;
+					color: $wheat;
+					border-color: $wheat;
+					&.Mui-selected {
+						background-color: $mahogany;
+						color: $wheat;
+						border-color: $wheat;
+					}
+				}
+			}
+		}
+	}
+}

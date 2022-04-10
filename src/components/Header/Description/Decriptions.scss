@@ -1,0 +1,42 @@
+@import "../../../variables.scss";
+
+.rjs-description {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"logo title"
+		"logo name";
+
+	svg {
+		grid-area: logo;
+		width: 80px;
+		@include for-size(mobile, down) {
+			width: 60px;
+		}
+		align-self: center;
+	}
+	.title {
+		grid-area: title;
+		white-space: nowrap;
+		@include for-size(mobile, down) {
+			white-space: normal;
+		}
+		align-self: end;
+		padding-bottom: 5px;
+	}
+	.name {
+		grid-area: name;
+		padding-top: 5px;
+	}
+	.title,
+	.name {
+		color: $color_blue_1;
+		font-weight: bold;
+		margin: 0 0 0 1rem;
+		font-size: 1.25rem;
+		@include for-size(mobile, down) {
+			font-size: 1.05rem;
+		}
+	}
+}

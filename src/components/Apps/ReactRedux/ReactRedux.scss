@@ -1,0 +1,33 @@
+/* SCSS HEX */
+$raisin-black: #161925ff;
+$prussian-blue: #23395bff;
+$queen-blue: #406e8eff;
+$cadet-grey: #8ea8c3ff;
+$aero-blue: #cbf7edff;
+
+.react-redux-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $raisin-black;
+	h1 {
+		color: $queen-blue;
+	}
+	h2 {
+		text-align: center;
+		color: $aero-blue;
+	}
+	.redux-count-value {
+		color: yellow;
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		padding: 20px;
+	}
+	button.MuiButton-root {
+		margin: 15px;
+		border-color: $aero-blue;
+		color: $aero-blue;
+	}
+}

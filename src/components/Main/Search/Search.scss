@@ -1,0 +1,11 @@
+@import "../../../variables.scss";
+
+.search-box {
+	.MuiAutocomplete-root {
+		background-color: $color_white_0 !important;
+		.MuiFilledInput-root.MuiInputBase-adornedEnd {
+			padding-bottom: 10px !important;
+			margin-top: 8px;
+		}
+	}
+}

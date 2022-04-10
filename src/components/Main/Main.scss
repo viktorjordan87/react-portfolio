@@ -1,0 +1,321 @@
+@import "../../variables.scss";
+
+main.rjs-main {
+	@include margin-width;
+	width: initial;
+	section.home-first-section {
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		@include for-size(mobile, down) {
+			flex-direction: column;
+		}
+		flex-wrap: nowrap;
+		margin-bottom: 30vh;
+		@include for-size(mobile, down) {
+			margin-bottom: 5vh;
+		}
+		.left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 50%;
+			@include for-size(1500px, down) {
+				width: 400px;
+			}
+			@include for-size(mobile, down) {
+				width: 75%;
+			}
+			.details-box {
+				position: relative;
+				left: 40%;
+				@include for-size(desktop, down) {
+					left: 25%;
+				}
+				p {
+					display: none;
+				}
+			}
+
+			p {
+				color: $color_gray_1;
+				text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+				font-size: 1.3rem;
+				@include for-size(tablet, down) {
+					font-size: 1.1rem;
+				}
+				font-weight: bold;
+				padding: 2rem;
+				line-height: 1.6;
+				width: 750px;
+				@include for-size(1500px, down) {
+					width: 100%;
+				}
+				@include for-size(mobile, down) {
+					width: 300px;
+					margin-left: 25px;
+				}
+			}
+		}
+	}
+	.right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1 1 50%;
+		@include for-size(1500px, down) {
+			flex: 1 1 60%;
+		}
+		picture img {
+			border-radius: 15px;
+			box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+			max-height: 80vh;
+			@include for-size(tablet, down) {
+				max-height: 60vh;
+			}
+			@include for-size(mobile, down) {
+				max-width: 80vw;
+			}
+		}
+	}
+
+	section.home-second-section {
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		@include for-size(mobile, down) {
+			flex-direction: column-reverse;
+		}
+		flex-wrap: nowrap;
+		margin-bottom: 30vh;
+		@include for-size(mobile, down) {
+			margin-bottom: 5vh;
+		}
+		.left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 50%;
+			@include for-size(1500px, down) {
+				flex: 1 1 60%;
+			}
+			picture img {
+				border-radius: 15px;
+				box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+				max-height: 80vh;
+				max-width: 50vw;
+				margin-left: 10%;
+				@include for-size(tablet, down) {
+					max-height: 60vh;
+					max-width: 45vw;
+				}
+				@include for-size(mobile, down) {
+					max-width: 80vw;
+					margin-left: 0;
+				}
+			}
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 50%;
+			.details-box {
+				position: relative;
+				right: 35%;
+				@include for-size(desktop, down) {
+					right: 25%;
+				}
+				@include for-size(tablet, down) {
+					width: 110%;
+				}
+				@include for-size(mobile, down) {
+					width: auto;
+					margin: 0 5vw;
+					right: 0;
+					top: 100px;
+				}
+			}
+		}
+		p {
+			color: $color_gray_1;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+			font-size: 1.3rem;
+			@include for-size(tablet, down) {
+				font-size: 1.1rem;
+			}
+			font-weight: bold;
+			line-height: 1.6;
+			width: 750px;
+			@include for-size(1500px, down) {
+				width: 100%;
+			}
+		}
+	}
+
+	section.home-third-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 30vh;
+		@include for-size(mobile, down) {
+			margin-bottom: 5vh;
+		}
+		/* Section title */
+		h2 {
+			color: $color_white_0;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.32);
+			font-family: BoonTook Mon;
+			font-size: 1.7rem;
+			@include for-size(tablet, down) {
+				font-size: 1.4rem;
+			}
+			margin: 0 0 1rem 0;
+			text-align: center;
+		}
+		/* Section details */
+		p.subtitle {
+			color: $color_gray_1;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+			font-size: 1.3rem;
+			@include for-size(tablet, down) {
+				font-size: 1.1rem;
+			}
+			font-weight: bold;
+			line-height: 1.6;
+			max-width: 60%;
+			text-align: center;
+			align-self: center;
+			margin-top: 0;
+		}
+		/* React searchbox title */
+		h3 {
+			opacity: 0.6;
+			color: $color_gray_1;
+			font-size: 1.2rem;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+		}
+
+		/* Image */
+		.udemy-picture,
+		.linkedin-picture {
+			padding: 5vmax;
+			display: grid;
+			place-items: center;
+			img {
+				object-fit: contain;
+				width: 66%;
+				@include for-size(mobile, down) {
+					width: 100%;
+				}
+			}
+		}
+		/* Search box */
+		.search-box {
+			max-width: 30%;
+			@include for-size(tablet, down) {
+				max-width: 50%;
+			}
+			@include for-size(mobile, down) {
+				max-width: 100%;
+			}
+		}
+		/* 		Search results */
+		.search-results {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+			margin-top: 5vh;
+			@include for-size(tablet, down) {
+				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+				row-gap: 20px;
+			}
+			@include for-size(mobile, down) {
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			}
+			list-style-type: none;
+			padding-left: 0;
+			max-height: 200vh;
+			overflow-y: scroll;
+			@include for-size(mobile, down) {
+				max-height: 400vh;
+			}
+			/* Scrollbar */
+			/* Works on Firefox */
+			& {
+				scrollbar-width: thin;
+				scrollbar-color: $color_blue_1 $color_blue_2;
+			}
+
+			/* Works on Chrome, Edge, and Safari */
+			&::-webkit-scrollbar {
+				width: 10px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: $color_blue_2;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $color_blue_1;
+				border-radius: 20px;
+				border: 3px solid $color_blue_2;
+			}
+
+			/* Mobile */
+			li.project {
+				@include for-size(mobile, down) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.project-title {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	section.home-fourth-section {
+		/* Section Title */
+		h2 {
+			color: $color_white_0;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.32);
+			font-family: BoonTook Mon;
+			font-size: 1.7rem;
+			@include for-size(tablet, down) {
+				font-size: 1.4rem;
+			}
+			margin: 0 0 1rem 0;
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+		/* Contactform */
+		.contact-container {
+			display: flex;
+			flex-direction: row;
+			@include for-size(mobile, down) {
+				flex-direction: column;
+				row-gap: 2rem;
+			}
+			.left,
+			.right {
+				flex-basis: 50%;
+				@include for-size(mobile, down) {
+					flex-basis: 100%;
+				}
+			}
+			.right {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding: 0 2rem;
+				@include for-size(mobile, down) {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

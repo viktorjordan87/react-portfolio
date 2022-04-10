@@ -1,0 +1,19 @@
+/* SCSS HEX */
+$dark-purple: #160c28ff;
+$orange-yellow-crayola: #efcb68ff;
+$honeydew: #e1efe6ff;
+$ash-gray: #aeb7b3ff;
+$rich-black-fogra-29: #000411ff;
+
+.music-player-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    .player{
+    background-color: $dark-purple;
+    width: 400px;
+    height: 650px;
+    }
+}

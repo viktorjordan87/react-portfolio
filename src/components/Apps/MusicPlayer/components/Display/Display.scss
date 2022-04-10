@@ -1,0 +1,29 @@
+/* SCSS HEX */
+$dark-purple: #160c28ff;
+$orange-yellow-crayola: #efcb68ff;
+$honeydew: #e1efe6ff;
+$ash-gray: #aeb7b3ff;
+$rich-black-fogra-29: #000411ff;
+
+.music-player-display {
+	display: grid;
+	place-items: center;
+	padding: 25px;
+	img.cover {
+		display: block;
+		width: 100%;
+		object-fit: contain;
+		margin-bottom: 25px;
+	}
+	h2.song {
+		margin: 15px auto 15px;
+		color: $orange-yellow-crayola;
+		text-transform: capitalize;
+	}
+	h3.details {
+		margin: 15px auto 0;
+		color: $ash-gray;
+		text-transform: capitalize;
+		opacity: 0.8;
+	}
+}

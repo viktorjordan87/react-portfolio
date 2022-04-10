@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "Ambivium";
+	src: local("Ambivium"), url("./Ambivium-Bold.woff2") format("woff2");
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Ambivium";
+	src: local("Ambivium"), url("./Ambivium-Light.woff2") format("woff2");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Ambivium";
+	src: local("Ambivium"), url("./Ambivium-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "BoonTook Mon";
+	src: local("BoonTook Mon"), url("./BoonTookMon-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+html {
+	@include for-size(mobile, up) {
+		font-size: 16px; /*i.e. = 1rem*/
+	}
+	@include for-size(mobile, down) {
+		font-size: 16px; /*i.e. = 1rem*/
+	}
+	@include for-size(ultrahd, up) {
+		font-size: 16px; /*i.e. = 1rem*/
+	}
+}

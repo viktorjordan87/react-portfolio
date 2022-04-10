@@ -1,0 +1,17 @@
+/* SCSS HEX */
+$coquelicot: #fc440fff;
+$sea-green-crayola: #1effbcff;
+$light-slate-gray: #7c9299ff;
+$trypan-blue: #1f01b9ff;
+$inchworm: #b4e33dff;
+
+.error-handling-example {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $light-slate-gray;
+	min-height: 100vh;
+	h1 {
+		color: $trypan-blue;
+	}
+}

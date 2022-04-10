@@ -1,0 +1,38 @@
+@import "../../../variables.scss";
+
+/* SCSS HEX */
+$gainsboro: #cfdbd5ff;
+$alabaster: #e8eddfff;
+$maize-crayola: #f5cb5cff;
+$eerie-black: #242423ff;
+$jet: #333533ff;
+
+.accordion-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	&.light {
+		background-color: $gainsboro;
+		h1,
+		h2 {
+			margin: 1rem;
+			color: $eerie-black;
+		}
+	}
+	&.dark {
+		background-color: $eerie-black;
+		h1,
+		h2 {
+			margin: 1rem;
+			color: $gainsboro;
+		}
+	}
+	.accordion-contents {
+		width: 50%;
+		@include for-size(mobile, down) {
+			width: 90%;
+		}
+	}
+}

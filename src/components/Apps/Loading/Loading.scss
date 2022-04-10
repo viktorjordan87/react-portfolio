@@ -1,0 +1,28 @@
+/* SCSS HEX */
+$oxford-blue: #0b132bff;
+$space-cadet: #1c2541ff;
+$y-in-mn-blue: #3a506bff;
+$maximum-blue-green: #5bc0beff;
+$white: #ffffffff;
+
+.loading-event-container {
+	background-color: $space-cadet;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1,
+	h2 {
+		text-align: center;
+		color: $white;
+	}
+	h3 {
+		color: $y-in-mn-blue;
+	}
+	li {
+		color: $maximum-blue-green;
+	}
+	.react-spinners p {
+		color: white;
+	}
+}

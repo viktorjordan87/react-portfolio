@@ -1,0 +1,24 @@
+@import "./variables.scss";
+@import "./fonts/typography.scss";
+
+body {
+	margin: 0;
+	display: flex;
+	justify-content: stretch;
+	width: 100%;
+	flex-direction: column;
+}
+
+div#root {
+	margin: 0;
+	flex-basis: 100%;
+	font-family: "Ambivium", sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $color_blue_2;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
