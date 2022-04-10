@@ -15,7 +15,7 @@ function Project({ project }) {
 				<Link className="image-url" to={`/${project.name}`}>
 					<Picture src={project.src} alt={`${project.title}`} />
 				</Link>
-				<a className="github-url" href={`${project.githuburl}`}>
+				<a className="github-url" href={`${project.githuburl}`} target="_blank" rel="noopener noreferrer">
 					<GitHubIcon className="github-icon" />
 					<span className="screen-reader-text">{project.githuburl}</span>
 				</a>
