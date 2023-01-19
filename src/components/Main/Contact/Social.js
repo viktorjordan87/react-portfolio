@@ -5,7 +5,7 @@ const Social = ({ name, link, mailTo }) => {
 	return (
 		<div className="social-element">
 			<p className="social-platform-name">{name}</p>
-			<a href={(mailTo ? "mailto:" : undefined) + link} className="social-platform-link">
+			<a href={(mailTo ? "mailto:" : "") + link} className="social-platform-link" target="_blank" rel="noreferrer">
 				{link}
 			</a>
 		</div>

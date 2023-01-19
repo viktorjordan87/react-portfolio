@@ -30,8 +30,13 @@ function Navigation() {
 						</HashLink>
 					</li>
 					<li>
-						<HashLink smooth to="/#experience" onClick={() => setMobileOpen(!mobileOpen)}>
+						<HashLink smooth to="/#services" onClick={() => setMobileOpen(!mobileOpen)}>
 							Experience
+						</HashLink>
+					</li>
+					<li>
+						<HashLink smooth to="/#certificates" onClick={() => setMobileOpen(!mobileOpen)}>
+							Certificates
 						</HashLink>
 					</li>
 					<li>

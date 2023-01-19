@@ -18,11 +18,17 @@ const ContactForm = () => {
 
 	const onSubmit = (e) => {
 		e.preventDefault();
-		/* If isBot = false then email wcdill be send, otherwise isBot true, then see console message and don't use EmailJs */
+		/* If isBot = false then email will be send, otherwise isBot true, then see console message and don't use EmailJs */
 		if (!isBot) {
-			send("service_tlsjvih", "template_g8r1dr6", toSend, "q-lbUJfo-ZUM38fwt")
+			send("service_byw0e1q", "template_g8r1dr6", toSend, "q-lbUJfo-ZUM38fwt")
 				.then((response) => {
 					console.log("SUCCESS!", response.status, response.text);
+					setToSend({
+						from_name: "",
+						message: "",
+						reply_to: "",
+					});
+					alert("Message sent. Thank you!");
 				})
 				.catch((err) => {
 					console.log("FAILED...", err);

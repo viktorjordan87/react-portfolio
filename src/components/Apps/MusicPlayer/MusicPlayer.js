@@ -16,9 +16,11 @@ const initialsongs = [
 /* https://aviyel.com/post/1193/building-a-music-player-application-in-react-js */
 function MusicPlayer() {
 	/* States */
+	// eslint-disable-next-line no-unused-vars
 	const [songs, setSongs] = useState(initialsongs);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentSongIndex, setCurrentSongIndex] = useState(0);
+	// eslint-disable-next-line no-unused-vars
 	const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
 	/* References */
@@ -56,7 +58,7 @@ function MusicPlayer() {
 				return currentSongIndex + 1;
 			}
 		});
-	}, [currentSongIndex]);
+	}, [currentSongIndex, songs]);
 
 	/* Skipping the actual song */
 	const SkipSong = (forwards = true) => {

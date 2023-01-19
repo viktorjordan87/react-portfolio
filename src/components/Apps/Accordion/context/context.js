@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 
 export const switcher = true; //true means dark theme is active, false means lightt theme is active
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "./Currency.scss";
 import axios from "axios";
 import { Autocomplete, TextField, Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
@@ -7,7 +7,7 @@ import { Autocomplete, TextField, Box, InputLabel, MenuItem, FormControl, Select
 function Currency() {
 	/* Get countries currencies list */
 	const [data, setData] = useState({});
-	const CURRENCY_API_KEY = "77c103f15b87ab0564aa";
+	const CURRENCY_API_KEY = "49e43348b355b18a0fd4";
 
 	/* Get countries data from API */
 	const getCountries = async () => {
@@ -22,6 +22,7 @@ function Currency() {
 	/* Get API data after DOM rendered once */
 	useEffect(() => {
 		getCountries();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	/* Define search term */
@@ -56,29 +57,33 @@ function Currency() {
 
 	/* After the user selected the searcTerm and the Currencies to and from after makes a new API request */
 	const [exchangeRate, setExchangeRate] = useState(1);
-	const getCurrentExchangeRate = async () => {
-		try {
-			const response = await axios.get(
-				`https://free.currconv.com/api/v7/convert?q=${searchList.get(currency1)}_${searchList.get(currency2)},${searchList.get(currency2)}_${searchList.get(
-					currency1
-				)}&compact=ultra&apiKey=${CURRENCY_API_KEY}`
-			);
-			setExchangeRate(response.data);
-		} catch (error) {
-			console.error(error);
-		}
-	};
-
-	useEffect(() => {
-		getCurrentExchangeRate();
-	}, [currencyValue]);
 
 	/* Convert the "data" object values into a new Map for list the currency types for the API input values, because if the searchterm is not equal the currencyId then the currency1-2 state is not suitable for request an API call*/
-	const searchList = new Map(
-		Object.values(data).map((list) => {
-			return [list[searchTerm], list.currencyId];
-		})
+	const searchList = useMemo(
+		() =>
+			new Map(
+				Object.values(data).map((list) => {
+					return [list[searchTerm], list.currencyId];
+				})
+			),
+		[data, searchTerm]
 	);
+
+	useEffect(() => {
+		const getCurrentExchangeRate = async () => {
+			try {
+				const response = await axios.get(
+					`https://free.currconv.com/api/v7/convert?q=${searchList.get(currency1)}_${searchList.get(currency2)},${searchList.get(currency2)}_${searchList.get(
+						currency1
+					)}&compact=ultra&apiKey=${CURRENCY_API_KEY}`
+				);
+				setExchangeRate(response.data);
+			} catch (error) {
+				console.error(error);
+			}
+		};
+		getCurrentExchangeRate();
+	}, [currencyValue, currency1, currency2, searchList]);
 
 	/* Textfields */
 

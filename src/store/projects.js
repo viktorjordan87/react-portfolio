@@ -18,6 +18,7 @@ import image16 from "../images/accordion.PNG";
 import image17 from "../images/musicplayer.PNG";
 import image18 from "../images/auth.PNG";
 import image19 from "../images/currency.PNG";
+import image20 from "../images/debounce.PNG";
 
 const github = "https://github.com/viktorjordan87/react-portfolio/tree/master/src/components/Apps/";
 
@@ -160,13 +161,21 @@ const projects = [
 		src: image18,
 		show: false,
 	},
+	// {
+	// 	id: 19,
+	// 	title: "Live currency exchange",
+	// 	name: "currencyexchange",
+	// 	githuburl: github + "Currency",
+	// 	tags: ["api", "conversion functions", "useState", "useEffect", "autocomplete", "new Map"],
+	// 	src: image19,
+	// },
 	{
-		id: 19,
-		title: "Live currency exchange",
-		name: "currencyexchange",
-		githuburl: github + "Currency",
-		tags: ["api", "conversion functions", "useState", "useEffect", "autocomplete", "new Map"],
-		src: image19,
+		id: 20,
+		title: "Debounce",
+		name: "debounce",
+		githuburl: github + "Debounce",
+		tags: ["api", "axios", "fetch", "useMemo"],
+		src: image20,
 	},
 ];
 

@@ -202,3 +202,10 @@ $mobile_margin_right: $mobile_padding_right;
 		margin-right: -$mobile_margin_right;
 	}
 }
+
+/* Responsive image */
+.responsive-image,
+.img-fluid {
+	width: 100%;
+	height: auto;
+}

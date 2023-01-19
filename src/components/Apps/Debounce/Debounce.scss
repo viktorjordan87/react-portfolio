@@ -1,0 +1,31 @@
+@import "../../../variables.scss";
+/* SCSS HEX */
+$lavender-blush: #f3e8eeff;
+$laurel-green: #bacdb0ff;
+$russian-green: #729b79ff;
+$deep-space-sparkle: #475b63ff;
+$raisin-black: #2e2c2fff;
+
+.debounce-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $raisin-black;
+	padding: 5vh 5vw;
+	h3 {
+		color: $lavender-blush;
+	}
+	ol {
+		li {
+			color: $laurel-green;
+			text-align: center;
+			margin: 1rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	h1.message {
+		color: #ffc857;
+	}
+}

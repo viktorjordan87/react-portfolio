@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Validator.scss";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -15,7 +15,7 @@ import badRobot from "../../../images/robor_killer.webp";
 /* Components */
 import Picture from "../Picture/Picture";
 
-const Validator = ({isBot, setIsBot}) => {
+const Validator = ({ isBot, setIsBot }) => {
 	return (
 		<div className="validator">
 			<Picture webSrc={isBot ? badRobot : goodRobot} />

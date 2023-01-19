@@ -3,6 +3,7 @@ import "./Main.scss";
 
 /* Import datas */
 import projects from "../../store/projects";
+import { certificates } from "../../store/certificates";
 
 /* Components */
 import Picture from "./Picture/Picture";
@@ -11,15 +12,18 @@ import Search from "./Search/Search";
 import Project from "./Project/Project";
 import ContactForm from "./Contact/ContactForm";
 import Social from "./Contact/Social";
+import OutlinedButton from "./Buttons/Buttons";
 
 /* Import images */
-import meSrc from "../../images/Viktor-Jordan-567x768.jpg";
-import meWebpSrc from "../../images/Viktor-Jordan-567x768.webp";
+// import meSrc from "../../images/Viktor-Jordan-567x768.jpg";
+// import meWebpSrc from "../../images/Viktor-Jordan-567x768.webp";
 import udemy from "../../images/udemy.PNG";
 import linkedinlearning from "../../images/Linkin-Learn.jpg";
+import profilePicture from "../../images/profile_picture.webp";
 
 import oceanSrc from "../../images/KoLan-1024x768.jpg";
 import oceanWebpSrc from "../../images/KoLan-1024x768.webp";
+import Certificate from "./Certificate/Certificate";
 
 function Main() {
 	/* Search State */
@@ -49,6 +53,9 @@ function Main() {
 		setValue(newValue);
 	};
 
+	/* Get my age */
+	const myAge = Math.floor((Date.now() - new Date("1987-07-15")) / (1000 * 60 * 60 * 24 * 365));
+
 	return (
 		<main className="rjs-main">
 			<section className="home-first-section">
@@ -60,14 +67,14 @@ function Main() {
 						href="#contact"
 					/>
 					<p>
-						As a web developer I am building web applications and websites for customers in the United States and in Europe. I specialized in reactjs JavaScript
-						front-end library with scss and JSX. I am available only remotely, but nowadays that shouldn't be a problem ㋡ Zoom - Meet - Skype - Teams: let's
-						talk / videochat.
+						As a web developer I am building web applications and websites for customers in the United States and in Europe. I specialized in Reactjs JavaScript
+						front-end library with scss and JSX. I am available remotely, but nowadays that shouldn't be a problem ㋡. Zoom - Meet - Skype - Teams: let's have a
+						meeting.
 					</p>
 				</div>
 
 				<div className="right">
-					<Picture src={meSrc} webSrc={meWebpSrc} alt="Viktor Jordan" />
+					<Picture src={profilePicture} webSrc={profilePicture} alt="Viktor Jordan" />
 				</div>
 			</section>
 
@@ -78,7 +85,7 @@ function Main() {
 				<div className="right">
 					<DetailsBox
 						firstLine="About Me"
-						secondLine="Viktor Jordan, 34"
+						secondLine={`Viktor Jordan, ${myAge}`}
 						text="I finished my studies as an logistics engineer (BSC+MSC), then after working as that, I learned to code to be a digital nomad and work as a remote software engineer. Nowadays I work as a reactjs developer and as a WordPress developer. See more in my LinkedIn profile."
 						buttonText="LinkedIn"
 						href="https://www.linkedin.com/in/jordangergoviktor/"
@@ -86,28 +93,38 @@ function Main() {
 				</div>
 			</section>
 
-			<section id="experience" className="home-third-section">
-				<h2>Experience</h2>
-				<p className="subtitle">
-					I learned html and css profoundly by building responsive WordPress sites. I usually get a UX/UI design which I translate into a theme. I modify the
-					final website later by the customer's feedback until everybody is satisfied. I used LinkedIn Learning a lot to acquire all the knowledge that is
-					necessary for becoming a web developer, but the real experience came from doing it.
-				</p>
-				<a className="linkedin-picture" href="https://www.linkedin.com/learning/" target="_blank" rel="noreferrer">
-					<img src={linkedinlearning} alt="LinkedIn Learning" />
-				</a>
-				<p className="subtitle">
-					I learned javascript with modern ES6+ features on Udemy. I took the 69h long course - "The Complete JavaScript Course 2022: From Zero to Expert!". I
-					spent 3-4 hours a day for a month to get through the program.
-				</p>
-				<a className="udemy-picture" href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank" rel="noreferrer">
-					<img src={udemy} alt="Javascript course on Udemy" />
-				</a>
-				<p className="subtitle">
-					And I learned react truly by building these small projects. I coded them by hand to get muscle memory and understand the concepts.
-				</p>
+			<section id="services" className="home-third-section">
+				<h2>What do I offer? Why should you hire me?</h2>
+				<ul>
+					<li>I build clean and effective react components for web applications</li>
+					<li>my code is fully responsive on mobile, tablet and desktop</li>
+					<li>have more than 2 years of experience working as a software developer</li>
+					<li>built a lot of websites with custom design</li>
+					<li>constantly learning new software languages for both frontend and backend</li>
+					<li>I am a problem solver, who doesn't a live problem behind</li>
+					<li>I am using npm packages, gulp task runner and webpack bundler on daily basis</li>
+				</ul>
+			</section>
+
+			<section id="certificates" className="home-fifth-section">
+				<h2>Certificates</h2>
+				<div className="certificates">
+					{certificates.map((certificate) => {
+						return <Certificate certificate={certificate} key={certificate.id} />;
+					})}
+				</div>
+				<h3 className="view-more">
+					<OutlinedButton buttonText="View my full list of certificates here" href="https://www.linkedin.com/in/jordangergoviktor/details/certifications/" />
+				</h3>
+			</section>
+
+			<section id="project" className="home-sixth-section">
 				<h3>React keyword:</h3>
 				<Search className="search-box" handleAutoCompleteChange={handleAutoCompleteChange} options={options} value={value} />
+				<p className="description">
+					And I learned react truly by building these small projects. I coded them by hand to get muscle memory and understand the concepts. Of course I have
+					bigger knowledge about building components, these are just a few example:
+				</p>
 				<ul className="search-results">
 					{/*eslint-disable-next-line array-callback-return*/}
 					{projects.map((project) => {

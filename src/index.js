@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hangman from "./components/Apps/Hangman/Hangman";
@@ -7,6 +6,7 @@ import RecoilTodo from "./components/Apps/RecoilTodo/RecoilTodo";
 import { RecoilRoot } from "recoil";
 import Calculator from "./components/Apps/Calculator/Calculator";
 import PaginationContainer from "./components/Apps/Pagination/Pagination";
+import { createRoot } from "react-dom/client";
 
 import PersistLocalStorage from "./components/Apps/Persisting/LocalStorage/PersistLocalStorage";
 import AutoComplete from "./components/Apps/AutoComplete/AutoComplete";
@@ -24,14 +24,17 @@ import { Provider } from "react-redux";
 import store from "./components/Apps/ReactRedux/store/store";
 import ReactRedux from "./components/Apps/ReactRedux/ReactRedux";
 import Accordion from "./components/Apps/Accordion/Accordion";
-import Auth from "./components/Apps/Auth/Auth";
-import Dashboard from "./components/Apps/Auth/components/Dashboard/Dashboard";
-import Preferences from "./components/Apps/Auth/components/Preferences/Preferences";
-import Login from "./components/Apps/Auth/components/Login/Login";
+// import Auth from "./components/Apps/Auth/Auth";
+// import Dashboard from "./components/Apps/Auth/components/Dashboard/Dashboard";
+// import Preferences from "./components/Apps/Auth/components/Preferences/Preferences";
+// import Login from "./components/Apps/Auth/components/Login/Login";
 import MusicPlayer from "./components/Apps/MusicPlayer/MusicPlayer";
 import Currency from "./components/Apps/Currency/Currency";
+import Debounce from "./components/Apps/Debounce/Debounce";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
 	<React.StrictMode>
 		<RecoilRoot>
 			<Provider store={store}>
@@ -55,16 +58,17 @@ ReactDOM.render(
 						<Route path="reactredux" element={<ReactRedux />} />
 						<Route path="accordion" element={<Accordion />} />
 						<Route path="musicplayer" element={<MusicPlayer />} />
-						<Route path="auth" element={<Auth />}>
+						<Route path="debounce" element={<Debounce />} />
+
+						{/* <Route path="auth" element={<Auth />}>
 							<Route path="dashboard" element={<Dashboard />} />
 							<Route path="preferences" element={<Preferences />} />
 							<Route path="login" element={<Login />} />
-						</Route>
+						</Route> */}
 						<Route path="currencyexchange" element={<Currency />} />
 					</Routes>
 				</BrowserRouter>
 			</Provider>
 		</RecoilRoot>
-	</React.StrictMode>,
-	document.getElementById("root")
+	</React.StrictMode>
 );
