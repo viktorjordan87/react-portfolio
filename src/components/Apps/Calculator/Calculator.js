@@ -76,44 +76,46 @@ const Calculator = () => {
 	};
 
 	return (
-		<div className="calculator-wrapper">
-			<h1>My Calculator</h1>
-			<div className="display">
-				{operation}
-				{value}
-			</div>
-			<div className="buttons">
-				{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
-					return (
-						<Button key={num} variant="contained" value={num} onClick={numberInput}>
-							{num}
-						</Button>
-					);
-				})}
-			</div>
-			<div className="buttons">
-				<Button variant="contained" value="AC" onClick={operationAC}>
-					AC
-				</Button>
-				<Button variant="contained" value="+" onClick={operationAdd}>
-					+
-				</Button>
-				<Button variant="contained" value="-" onClick={operationSubstraction}>
-					-
-				</Button>
-				<Button variant="contained" value="*" onClick={operationMultiply}>
-					*
-				</Button>
-				<Button variant="contained" value="/" onClick={operationDivide}>
-					/
-				</Button>
-				<Button variant="contained" value="=" onClick={operationEqual}>
-					=
-				</Button>
-			</div>
-			<div className="result">
-				<strong>Result:</strong>
-				{result}
+		<div className="calculator-container">
+			<div className="calculator-wrapper">
+				<h1>My Calculator - good for one operation.</h1>
+				<div className="display">
+					{operation}
+					{value}
+				</div>
+				<div className="buttons">
+					{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
+						return (
+							<Button key={num} variant="contained" value={num} onClick={numberInput}>
+								{num}
+							</Button>
+						);
+					})}
+				</div>
+				<div className="buttons">
+					<Button variant="contained" value="AC" onClick={operationAC}>
+						AC
+					</Button>
+					<Button variant="contained" value="+" onClick={operationAdd}>
+						+
+					</Button>
+					<Button variant="contained" value="-" onClick={operationSubstraction}>
+						-
+					</Button>
+					<Button variant="contained" value="*" onClick={operationMultiply}>
+						*
+					</Button>
+					<Button variant="contained" value="/" onClick={operationDivide}>
+						/
+					</Button>
+					<Button variant="contained" value="=" onClick={operationEqual}>
+						=
+					</Button>
+				</div>
+				<div className="result">
+					<strong>Result:</strong>
+					{result}
+				</div>
 			</div>
 		</div>
 	);

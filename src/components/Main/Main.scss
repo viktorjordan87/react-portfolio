@@ -189,8 +189,14 @@ main.rjs-main {
 			align-content: space-between;
 			li {
 				color: white;
-				font-size: 1.6rem;
 				margin: 10px 0;
+
+				font-size: 1.3rem;
+				@include for-size(tablet, down) {
+					font-size: 1.1rem;
+				}
+				font-weight: bold;
+				line-height: 1.6;
 			}
 		}
 	}

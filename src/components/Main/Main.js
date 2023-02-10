@@ -17,8 +17,8 @@ import OutlinedButton from "./Buttons/Buttons";
 /* Import images */
 // import meSrc from "../../images/Viktor-Jordan-567x768.jpg";
 // import meWebpSrc from "../../images/Viktor-Jordan-567x768.webp";
-import udemy from "../../images/udemy.PNG";
-import linkedinlearning from "../../images/Linkin-Learn.jpg";
+// import udemy from "../../images/udemy.PNG";
+// import linkedinlearning from "../../images/Linkin-Learn.jpg";
 import profilePicture from "../../images/profile_picture.webp";
 
 import oceanSrc from "../../images/KoLan-1024x768.jpg";
@@ -101,7 +101,7 @@ function Main() {
 					<li>have more than 2 years of experience working as a software developer</li>
 					<li>built a lot of websites with custom design</li>
 					<li>constantly learning new software languages for both frontend and backend</li>
-					<li>I am a problem solver, who doesn't a live problem behind</li>
+					<li>I am a problem solver, who doesn't leave a problem behind</li>
 					<li>I am using npm packages, gulp task runner and webpack bundler on daily basis</li>
 				</ul>
 			</section>
@@ -123,7 +123,7 @@ function Main() {
 				<Search className="search-box" handleAutoCompleteChange={handleAutoCompleteChange} options={options} value={value} />
 				<p className="description">
 					And I learned react truly by building these small projects. I coded them by hand to get muscle memory and understand the concepts. Of course I have
-					bigger knowledge about building components, these are just a few example:
+					bigger knowledge about building components, these are just a few example.
 				</p>
 				<ul className="search-results">
 					{/*eslint-disable-next-line array-callback-return*/}

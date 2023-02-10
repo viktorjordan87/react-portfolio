@@ -17,7 +17,7 @@ import image15 from "../images/reactredux.PNG";
 import image16 from "../images/accordion.PNG";
 import image17 from "../images/musicplayer.PNG";
 import image18 from "../images/auth.PNG";
-import image19 from "../images/currency.PNG";
+// import image19 from "../images/currency.PNG";
 import image20 from "../images/debounce.PNG";
 
 const github = "https://github.com/viktorjordan87/react-portfolio/tree/master/src/components/Apps/";
@@ -31,14 +31,6 @@ const projects = [
 		githuburl: github + "RecoilTodo",
 		tags: ["recoil", "useRecoilState", "useRecoilValue", "mui", "3rd party library"],
 		src: image2,
-	},
-	{
-		id: 3,
-		title: "Calculator",
-		name: "calculator",
-		githuburl: github + "Calculator",
-		tags: ["useState"],
-		src: image3,
 	},
 	{
 		id: 4,
@@ -176,6 +168,14 @@ const projects = [
 		githuburl: github + "Debounce",
 		tags: ["api", "axios", "fetch", "useMemo"],
 		src: image20,
+	},
+	{
+		id: 3,
+		title: "Calculator",
+		name: "calculator",
+		githuburl: github + "Calculator",
+		tags: ["useState"],
+		src: image3,
 	},
 ];
 

@@ -52,7 +52,7 @@ const Debounce = () => {
 			setLocalSearch(e.target.value);
 			clearTimeout(timeoutID);
 			timeoutID = setTimeout(() => {
-				handleRequest({ name: e.target.name, value: encodeURIComponent(e.target.value) });
+				//handleRequest({ name: e.target.name, value: encodeURIComponent(e.target.value) });
 				setMessage(e.target.value);
 			}, 1200);
 		};
