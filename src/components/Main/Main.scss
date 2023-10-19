@@ -354,4 +354,29 @@ main.rjs-main {
 			}
 		}
 	}
+
+	/* References */
+	/* Contact  */
+	section.home-seventh-section {
+		margin-top: 10vh;
+		/* Section Title */
+		h2 {
+			color: $color_white_0;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.32);
+			font-family: BoonTook Mon;
+			font-size: 1.7rem;
+			@include for-size(tablet, down) {
+				font-size: 1.4rem;
+			}
+			margin: 0;
+			text-align: center;
+		}
+		h3.subtitle {
+			text-align: center;
+			opacity: 0.6;
+			color: $color_gray_1;
+			font-size: 1.2rem;
+			text-shadow: 0px 3px 6px rgba($color_black_0, 0.16);
+		}
+	}
 }

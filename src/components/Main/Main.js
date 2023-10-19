@@ -19,11 +19,12 @@ import OutlinedButton from "./Buttons/Buttons";
 // import meWebpSrc from "../../images/Viktor-Jordan-567x768.webp";
 // import udemy from "../../images/udemy.PNG";
 // import linkedinlearning from "../../images/Linkin-Learn.jpg";
-import profilePicture from "../../images/profile_picture.webp";
+import profilePicture from "../../images/profile-1024x768.webp";
 
 import oceanSrc from "../../images/KoLan-1024x768.jpg";
 import oceanWebpSrc from "../../images/KoLan-1024x768.webp";
 import Certificate from "./Certificate/Certificate";
+import References from "./References/References";
 
 function Main() {
 	/* Search State */
@@ -74,13 +75,24 @@ function Main() {
 				</div>
 
 				<div className="right">
-					<Picture src={profilePicture} webSrc={profilePicture} alt="Viktor Jordan" />
+					<Picture
+						src={profilePicture}
+						webSrc={profilePicture}
+						alt="Viktor Jordan"
+					/>
 				</div>
 			</section>
 
-			<section id="aboutme" className="home-second-section">
+			<section
+				id="aboutme"
+				className="home-second-section"
+			>
 				<div className="left">
-					<Picture src={oceanSrc} webSrc={oceanWebpSrc} alt="Thailand Ko Lahn" />
+					<Picture
+						src={oceanSrc}
+						webSrc={oceanWebpSrc}
+						alt="Thailand Ko Lahn"
+					/>
 				</div>
 				<div className="right">
 					<DetailsBox
@@ -93,7 +105,10 @@ function Main() {
 				</div>
 			</section>
 
-			<section id="services" className="home-third-section">
+			<section
+				id="services"
+				className="home-third-section"
+			>
 				<h2>What do I offer? Why should you hire me?</h2>
 				<ul>
 					<li>I build clean and effective react components for web applications</li>
@@ -106,21 +121,49 @@ function Main() {
 				</ul>
 			</section>
 
-			<section id="certificates" className="home-fifth-section">
+			<section
+				id="references"
+				className="home-seventh-section"
+			>
+				<h2>References</h2>
+				<h3 className="subtitle">I worked on the following projects as a react developer</h3>
+				<References />
+			</section>
+
+			<section
+				id="certificates"
+				className="home-fifth-section"
+			>
 				<h2>Certificates</h2>
 				<div className="certificates">
 					{certificates.map((certificate) => {
-						return <Certificate certificate={certificate} key={certificate.id} />;
+						return (
+							<Certificate
+								certificate={certificate}
+								key={certificate.id}
+							/>
+						);
 					})}
 				</div>
 				<h3 className="view-more">
-					<OutlinedButton buttonText="View my full list of certificates here" href="https://www.linkedin.com/in/jordangergoviktor/details/certifications/" />
+					<OutlinedButton
+						buttonText="View my full list of certificates here"
+						href="https://www.linkedin.com/in/jordangergoviktor/details/certifications/"
+					/>
 				</h3>
 			</section>
 
-			<section id="project" className="home-sixth-section">
+			<section
+				id="project"
+				className="home-sixth-section"
+			>
 				<h3>React keyword:</h3>
-				<Search className="search-box" handleAutoCompleteChange={handleAutoCompleteChange} options={options} value={value} />
+				<Search
+					className="search-box"
+					handleAutoCompleteChange={handleAutoCompleteChange}
+					options={options}
+					value={value}
+				/>
 				<p className="description">
 					And I learned react truly by building these small projects. I coded them by hand to get muscle memory and understand the concepts. Of course I have
 					bigger knowledge about building components, these are just a few example.
@@ -130,22 +173,40 @@ function Main() {
 					{projects.map((project) => {
 						/* If the project id is included in results or the results array is empty then show everything and the show attribute is not false in the project*/
 						if (results.includes(project.id) || (results.length === 0 && project.show !== false)) {
-							return <Project project={project} key={project.id} />;
+							return (
+								<Project
+									project={project}
+									key={project.id}
+								/>
+							);
 						}
 					})}
 				</ul>
 			</section>
 
-			<section id="contact" className="home-fourth-section">
+			<section
+				id="contact"
+				className="home-fourth-section"
+			>
 				<h2>Contact</h2>
 				<div className="contact-container">
 					<div className="left">
 						<ContactForm />
 					</div>
 					<div className="right">
-						<Social name="Email:" link="viktorjordan87@gmail.com" mailTo />
-						<Social name="Facebook:" link="https://www.facebook.com/viktor.jordan.9889/" />
-						<Social name="LinkedIn:" link="https://www.linkedin.com/in/jordangergoviktor/" />
+						<Social
+							name="Email:"
+							link="viktorjordan87@gmail.com"
+							mailTo
+						/>
+						<Social
+							name="Facebook:"
+							link="https://www.facebook.com/viktor.jordan.9889/"
+						/>
+						<Social
+							name="LinkedIn:"
+							link="https://www.linkedin.com/in/jordangergoviktor/"
+						/>
 					</div>
 				</div>
 			</section>

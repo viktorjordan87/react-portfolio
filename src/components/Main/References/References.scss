@@ -1,0 +1,35 @@
+@import "../../../variables.scss";
+
+.references {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2.5%;
+
+	.reference {
+		flex: 1 1 45%;
+		@include for-size(mobile, down) {
+			flex: 1 1 90%;
+		}
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		picture {
+			display: flex;
+			width: 100%;
+			img {
+				width: 100%;
+				object-fit: cover;
+				box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+			}
+		}
+		h4 {
+			color: $color_white_0;
+			margin-top: 2rem;
+		}
+		p {
+			color: rgba($color: white, $alpha: 0.7);
+		}
+	}
+}
